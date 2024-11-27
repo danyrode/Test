@@ -4,117 +4,201 @@ body {
     font-family: "Arial", "Helvetica", sans-serif;
 }
 
-.home {
+/* Fondo de video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    background-image: url("https://images.unsplash.com/photo-1518973318836-3ba856327fbc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .cover {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 0 20%;
     box-sizing: border-box;
-}
-
-.navbar {
-    width: 100%;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    box-sizing: border-box;
-    position: static;
     color: white;
 }
 
-.content {
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    font-family: "Arial", "Helvetica", sans-serif;
+/* Botones interactivos */
+.btn-secondary {
+    animation: pulse 2s infinite;
 }
 
+/* Animación del botón */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Texto principal */
 .content h1 {
     font-size: 70px;
-}
-
-.content h2 {
-    font-size: 65px;
+    font-weight: bold;
     color: #e71d73;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.content h3 {
-    font-size: 45px;
-    font-style: italic;
-    text-align: left;
+.content p {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
 }
 
-.btn-primary {
-    width: 240px;
-    height: 48px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 24px;
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
-.btn-secondary {
-    width: 240px;
-    height: 48px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 24px;
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e71d73;
-}
-
-.btn-secondary:hover {
-    background-color: white;
-    color: black;
-}
-
+/* Título principal del blog */
 .vlogtitle {
     text-align: center;
-    font-size: 25px;
-    padding: 25px;
+    margin: 50px 0;
 }
 
-.image1 {
-    align-self: center;
+.vlogtitle h2 {
+    font-size: 58px;
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 45px;
 }
 
-.jalapao {
-    background-color: white;
-    text-align: left;
+/* Alineación del párrafo debajo del título */
+.vlogtitle p {
+    font-size: 18px; /* Asegura que el tamaño del texto sea consistente */
+    line-height: 1.6; /* Alinea el espaciado de las líneas con el resto del contenido */
+    color: #333; /* Color de texto consistente */
+    margin-left: 200px; /* Margen izquierdo para alinear con el resto del texto */
+    margin-right: 200px; /* Opcional: margen derecho para mantener consistencia */
+    text-align: justify; /* Justifica el texto para que tenga un buen flujo */
 }
 
-.jalapaocont {
-    width: 100%;
-    height: 100%;
+
+/* Estructura general */
+.content-section {
+    padding: 50px 10%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 50px;
 }
+
+/* Títulos y descripción */
+.section-title h3 {
+    font-size: 28px;
+    color: #e71d73;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-title p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Estructura multimedia */
+.media-row {
+    display: flex;
+    gap: 20px; /* Espacio entre la imagen y el video */
+    flex-wrap: nowrap; /* Aseguramos que no se rompa a una nueva línea */
+    justify-content: center; /* Centra el contenido */
+    align-items: flex-start; /* Asegura que la imagen y el video estén alineados arriba */
+    margin-top: 20px;
+}
+
+/* Imagen */
+.section-image img {
+    width: 100%;
+    max-width: 1000px; /* Aumento significativo del tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video con relación 16:9 ajustado al 90% */
+.section-video {
+    width: 100%;
+    max-width: 684px; /* Tamaño del video sigue siendo 684px */
+    height: auto;
+    margin-bottom: 30px; /* Añadido para separar el video del contenido siguiente */
+}
+
+.section-video iframe {
+    width: 100%;
+    height: 468px; /* Mantener altura proporcional */
+    border: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .media-row {
+        flex-direction: column; /* En pantallas más pequeñas, apilamos imagen y video */
+        align-items: center;
+    }
+
+    .section-image img, .section-video iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-video {
+        max-width: 100%;
+        height: 400px; /* Ajuste de altura en pantallas más pequeñas */
+        margin-bottom: 20px; /* Espacio adicional en pantallas pequeñas */
+    }
+}
+
+
+/* Estilo para listas con viñetas cuadradas personalizadas */
+ul {
+    list-style-type: none; /* Elimina las viñetas predeterminadas */
+    padding-left: 20px; /* Espacio a la izquierda */
+    font-size: 18px; /* Tamaño de fuente consistente */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo de cada item de la lista */
+ul li {
+    position: relative; /* Necesario para posicionar las viñetas personalizadas */
+    padding-left: 30px; /* Espacio a la izquierda */
+    color: black; /* Texto negro */
+    font-size: inherit; /* Hereda el tamaño de fuente */
+    line-height: inherit; /* Hereda el espaciado */
+}
+
+/* Creación de las viñetas cuadradas personalizadas */
+ul li::before {
+    content: ""; /* No hay texto, solo la viñeta */
+    position: absolute;
+    left: 0; /* Coloca la viñeta a la izquierda del texto */
+    top: 50%; /* Centra verticalmente la viñeta */
+    transform: translateY(-50%); /* Ajuste para que esté completamente centrada */
+    width: 12px; /* Tamaño del cuadrado */
+    height: 12px; /* Tamaño del cuadrado */
+    background-color: black; /* Color negro para la viñeta */
+}
+
+
+
+
+
+
+
+
