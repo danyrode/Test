@@ -31,6 +31,7 @@ body {
 /* Botones interactivos */
 .btn-secondary {
     animation: pulse 2s infinite;
+    align-items: center;
 }
 
 /* Animación del botón */
@@ -51,10 +52,11 @@ body {
 
 /* Texto principal */
 .content h1 {
-    font-size: 70px;
+    font-size: 75px;
     font-weight: bold;
-    color: #e71d73;
+    color: #ffdf00;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
 .content p {
@@ -74,7 +76,7 @@ body {
     font-size: 58px;
     font-weight: bold;
     font-style: italic;
-    color: #333;
+    color: #0a2f76;
     margin-bottom: 45px;
 }
 
@@ -100,7 +102,7 @@ body {
 /* Títulos y descripción */
 .section-title h3 {
     font-size: 28px;
-    color: #e71d73;
+    color: #079a49;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -195,9 +197,16 @@ ul li::before {
     background-color: black; /* Color negro para la viñeta */
 }
 
+.conclution-section{
+    padding: 50px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
-
-
+.footer h3{
+    text-align: right;
+}
 
 
 
