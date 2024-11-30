@@ -125,26 +125,28 @@ body {
     margin-top: 20px;
 }
 
-/* Imagen */
 .section-image img {
     width: 100%;
-    max-width: 1000px; /* Aumento significativo del tamaño de la imagen */
+    max-width: 684px; /* El mismo max-width que el video */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Asegura que la imagen cubra completamente el área */
+    aspect-ratio: 16 / 9; /* Establece la relación de aspecto 16:9 */
 }
 
 /* Video con relación 16:9 ajustado al 90% */
 .section-video {
     width: 100%;
-    max-width: 684px; /* Tamaño del video sigue siendo 684px */
+    max-width: 684px; /* El mismo max-width que la imagen */
     height: auto;
     margin-bottom: 30px; /* Añadido para separar el video del contenido siguiente */
 }
 
 .section-video iframe {
     width: 100%;
-    height: 468px; /* Mantener altura proporcional */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
     border: none;
 }
 
